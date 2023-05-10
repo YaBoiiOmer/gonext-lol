@@ -1,3 +1,4 @@
+import PlayerPage from "./pages/PlayerPage";
 import MainPage from "./pages/MainPage";
 
 function App() {
