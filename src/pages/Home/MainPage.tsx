@@ -1,5 +1,4 @@
-import "../css/pages/MainPage/MainPage.css";
-
+import "../../assets/styles/pages/MainPage.css";
 function MainPage() {
   return (
     <>
