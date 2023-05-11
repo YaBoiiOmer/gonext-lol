@@ -9,7 +9,10 @@ export default function StatsPageNavbar() {
           <h5>Level 427</h5>
         </div>
       </div>
-      <StatsPageRankedComponent rank="Platinum 4" lp={29} wins={22} loses={7}></StatsPageRankedComponent>
+      <div className={styles.Ranks}>
+        <StatsPageRankedComponent rank="Platinum 4" lp={29} wins={22} loses={7} icon={"/src/assets/profileexample/platinum.webp"}></StatsPageRankedComponent>
+        <StatsPageRankedComponent rank="Master" lp={0} wins={71} loses={46} icon={"/src/assets/profileexample/master.png"}></StatsPageRankedComponent>
+      </div>
     </div>
   );
 }
@@ -19,12 +22,14 @@ interface RankedProps {
   lp: number;
   wins: number;
   loses: number;
+  icon?: string; // file path
 }
 
 function StatsPageRankedComponent(props: RankedProps) {
+  const customStyle = props.icon ? { backgroundImage: `url(${props.icon})` } : { backgroundImage: "" };
   return (
     <div className={styles.RankedComponent}>
-      <div className={styles.RankedComponentIcon}></div>
+      <div style={customStyle} className={styles.RankedComponentIcon}></div>
       <div className={styles.RankedComponentStats}>
         <h2>{props.rank}</h2>
         <div className={styles.RankedComponentStatsBottom}>
