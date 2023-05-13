@@ -7,8 +7,9 @@ function StatsPage() {
     <div className={style.StatsPage}>
       <StatsPageNavbar></StatsPageNavbar>
       <div className={style.MatchHistory}>
-        <Match></Match>
-        <Match></Match>
+        <Match outcome="Defeat"></Match>
+        <Match outcome="Victory"></Match>
+        <Match outcome="Remake"></Match>
       </div>
     </div>
   );
